@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: dedsec-file-converter
+    runtime: python
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg imagemagick libreoffice p7zip-full
+      pip install -r requirements.txt
+    startCommand: gunicorn converter_bot:app_flask
+    envVars:
+      - key: BOT_TOKEN
+        value: 8687335090:AAHnRuMSfkA1qyP6VNhdYeqAEJlQjWbXZE8
+      - key: WEBHOOK_URL
+        value: https://vhiiam-1.onrender.com
+      - key: PORT
+        value: 5000
