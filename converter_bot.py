@@ -39,7 +39,7 @@ except ImportError:
 # ============================================
 
 BOT_TOKEN = "8687335090:AAHnRuMSfkA1qyP6VNhdYeqAEJlQjWbXZE8"
-WEBHOOK_URL = "https://vhiiam-1.onrender.com"  # Change after deploy
+WEBHOOK_URL = "https://sndnjd-2.onrender.com"  # Change after deploy
 PORT = int(os.environ.get('PORT', 5000))
 
 # Flask app for Render
